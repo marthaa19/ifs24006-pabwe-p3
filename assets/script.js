@@ -362,7 +362,7 @@ function buatKartuTransaksi(t) {
   judulEl.textContent = t.judul;
 
   const metaEl = document.createElement("p");
-  metaEl.className = "text-xs text-ink/50 mt-0.5";
+  metaEl.className = "text-xs text-ink/70 mt-0.5";
   metaEl.textContent = `${t.kategori} • ${formatTanggal(t.tanggal)}`;
 
   kiri.append(judulEl, metaEl);
@@ -379,21 +379,23 @@ function buatKartuTransaksi(t) {
 
   const btnEdit = document.createElement("button");
   btnEdit.type = "button";
-  btnEdit.className = "p-1.5 rounded-md text-ink/50 hover:bg-paper hover:text-ink";
+  btnEdit.className =
+    "w-11 h-11 flex items-center justify-center shrink-0 rounded-md text-ink/60 hover:bg-paper hover:text-ink";
   btnEdit.setAttribute("aria-label", "Ubah transaksi");
   btnEdit.dataset.action = "edit";
   btnEdit.dataset.id = t.id;
   btnEdit.innerHTML =
-    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
+    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
 
   const btnHapus = document.createElement("button");
   btnHapus.type = "button";
-  btnHapus.className = "p-1.5 rounded-md text-ink/50 hover:bg-expense/10 hover:text-expense";
+  btnHapus.className =
+    "w-11 h-11 flex items-center justify-center shrink-0 rounded-md text-ink/60 hover:bg-expense/10 hover:text-expense";
   btnHapus.setAttribute("aria-label", "Hapus transaksi");
   btnHapus.dataset.action = "delete";
   btnHapus.dataset.id = t.id;
   btnHapus.innerHTML =
-    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>';
+    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>';
 
   aksiWrap.append(btnEdit, btnHapus);
   kanan.append(jumlahEl, aksiWrap);
@@ -618,7 +620,7 @@ function buatKartuBookmark(b) {
   link.textContent = b.nama;
 
   const urlText = document.createElement("p");
-  urlText.className = "text-xs text-ink/45 truncate mt-0.5";
+  urlText.className = "text-xs text-ink/70 truncate mt-0.5";
   urlText.textContent = b.url;
 
   info.append(link, urlText);
@@ -630,7 +632,7 @@ function buatKartuBookmark(b) {
   baris1.append(info, badge);
 
   const catatanEl = document.createElement("p");
-  catatanEl.className = "text-sm text-ink/60";
+  catatanEl.className = "text-sm text-ink/70";
   catatanEl.textContent = b.catatan || "Tidak ada catatan.";
 
   const baris3 = document.createElement("div");
@@ -638,21 +640,23 @@ function buatKartuBookmark(b) {
 
   const btnEdit = document.createElement("button");
   btnEdit.type = "button";
-  btnEdit.className = "p-1.5 rounded-md text-ink/50 hover:bg-paper hover:text-ink";
+  btnEdit.className =
+    "w-11 h-11 flex items-center justify-center shrink-0 rounded-md text-ink/60 hover:bg-paper hover:text-ink";
   btnEdit.setAttribute("aria-label", "Ubah bookmark");
   btnEdit.dataset.action = "edit";
   btnEdit.dataset.id = b.id;
   btnEdit.innerHTML =
-    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
+    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
 
   const btnHapus = document.createElement("button");
   btnHapus.type = "button";
-  btnHapus.className = "p-1.5 rounded-md text-ink/50 hover:bg-expense/10 hover:text-expense";
+  btnHapus.className =
+    "w-11 h-11 flex items-center justify-center shrink-0 rounded-md text-ink/60 hover:bg-expense/10 hover:text-expense";
   btnHapus.setAttribute("aria-label", "Hapus bookmark");
   btnHapus.dataset.action = "delete";
   btnHapus.dataset.id = b.id;
   btnHapus.innerHTML =
-    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>';
+    '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>';
 
   baris3.append(btnEdit, btnHapus);
   kartu.append(baris1, catatanEl, baris3);
